@@ -1,32 +1,23 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Калькулятор</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="main">
-      <div class="logo"><h2>Рассчитайте стоимость товара</h2></div>
-      <form action="">
-        <label for="productList">Выберите товар:</label>
-            <select id="productList">
-            <option value="30">Хлеб белый</option>
-            <option selected value="170">Сыр российский 200 г</option>
-            <option value="65">Огурцы короткоплодные 1 кг</option>
-        </select>
-
-        <label for="quantity">Введите количество товара:</label>
-        <input type="text" id="quantity">
-
-        <button id="calculateButton">Посчитать стоимость</button>
-
-        <p id="cost"></p>
-      </form>
-      <div class="result" id="result"></div>
-    </div>
-    <script src="script.js" defer></script>
-  </body>
+<html>
+<head>
+    <title>Калькулятор стоимости заказа</title>
+    <link rel="stylesheet" href="C:\Users\gavri\Desktop\НИКИТА\ДЗ 5\style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="logo"><h2>Рассчитайте стоимость товара</h2></div>
+    <label for="product">Выберите товар:</label>
+    <select id="product">
+        <option value="113">Сыр полутвёрдый, российский, 200г. — 113₽</option>
+        <option value="33">Хлеб тостовый в нарезке, 220г. — 33₽</option>
+        <option value="230">Колбаса салями, 350г. — 230₽</option>
+        <option value="990">Кофе турецкий, натуральный, 500г. — 990₽</option>
+        <option value="65">Чай чёрный, натуральный, 250г. — 65₽</option>
+        <option value="45">Творог мягкий, нежный, 250г. — 45₽</option>
+    </select>
+    <input type="text" id="quantity" placeholder="Количество товара">
+    <button onclick="calculateTotal()">Рассчитать стоимость</button>
+    <p id="totalCost"></p>
+</body>
 </html>
