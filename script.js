@@ -1,9 +1,11 @@
-function calculateCost() {
-  let selectElement = document.getElementById('ProductList');
-  let product = selectElement.value;
-  var quantity = parseInt(document.getElementById("quantity").value);
-  var totalCost = quantity * product;
-  let s=document.getElementById("result").textContent = "Общая стоимость заказа: $" + totalCost;
-  console.log(s[0].value);
-  return false;
+function calculateTotal() {
+  var productPrice = parseFloat(document.getElementById('product').value);
+  var quantity = parseInt(document.getElementById('quantity').value);
+
+  if (!isNaN(productPrice) && !isNaN(quantity)) {
+      var totalCost = productPrice * quantity;
+      document.getElementById('totalCost').textContent = 'Итоговая стоимость: ₽' + totalCost;
+  } else {
+      document.getElementById('totalCost').textContent = 'Пожалуйста, введите правильные данные';
+  }
 }
