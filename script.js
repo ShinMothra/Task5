@@ -1,11 +1,16 @@
-function calculateTotal() {
-  var productPrice = parseFloat(document.getElementById('product').value);
-  var quantity = parseInt(document.getElementById('quantity').value);
+document.addEventListener('DOMContentLoaded', function () { 
+  let b = document.getElementById("calculate");
+  b.addEventListener("click", calculateTotal);
 
-  if (!isNaN(productPrice) && !isNaN(quantity)) {
+  function calculateTotal() {
+    var productPrice = parseFloat(document.getElementById('product').value);
+    var quantity = parseInt(document.getElementById('quantity').value);
+
+    if (!isNaN(productPrice) && !isNaN(quantity)) {
       var totalCost = productPrice * quantity;
       document.getElementById('totalCost').textContent = 'Итоговая стоимость: ₽' + totalCost;
-  } else {
+    } else {
       document.getElementById('totalCost').textContent = 'Пожалуйста, введите правильные данные';
+    }
   }
-}
+})
